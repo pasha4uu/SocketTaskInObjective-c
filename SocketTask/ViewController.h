@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SocketIO-Swift.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *ipTF;
 @property (weak, nonatomic) IBOutlet UITextField *portTF;
 @property (weak, nonatomic) IBOutlet UITextField *dataTF;
 - (IBAction)disconnectServerTap:(id)sender;
 - (IBAction)connectServerTap:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *displayTFV;
 
 
 - (IBAction)sendDataTap:(id)sender;
