@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocketIO-Swift.h"
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *ipTF;
+@property (weak, nonatomic) IBOutlet UITextField *portTF;
+@property (weak, nonatomic) IBOutlet UITextField *dataTF;
+- (IBAction)disconnectServerTap:(id)sender;
+- (IBAction)connectServerTap:(id)sender;
 
 
+- (IBAction)sendDataTap:(id)sender;
+@property SocketManager * socket;
+@property SocketIOClient * socketClient;
 @end
 
